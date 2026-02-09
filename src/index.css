@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-image: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.08), transparent 40%),
+      radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.08), transparent 35%);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-soft;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-lucid via-pulse to-aura;
+  }
+
+  .ai-ring {
+    background: conic-gradient(from 120deg, rgba(56, 189, 248, 0.4), rgba(124, 58, 237, 0.4), rgba(16, 185, 129, 0.4));
+  }
+
+  .shimmer {
+    background: linear-gradient(110deg, rgba(255,255,255,0.15) 25%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.15) 65%);
+    background-size: 200% 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
